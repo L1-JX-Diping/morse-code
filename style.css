@@ -1,0 +1,30 @@
+/* 既存のスタイルは維持し、以下を追記 */
+
+body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #2c3e50; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+.container { background: #34495e; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); text-align: center; width: 80%; max-width: 600px; }
+h1 { margin-bottom: 1.5rem; color: #1abc9c; }
+
+.menu-btn {
+   display: block; width: 100%; padding: 20px; margin: 15px 0;
+   font-size: 1.2rem; cursor: pointer; background: #1abc9c;
+   color: white; border: none; border-radius: 8px; transition: 0.2s;
+}
+.menu-btn:hover { background: #16a085; transform: translateY(-2px); }
+
+.display-area { font-size: 3rem; margin: 20px 0; padding: 20px; background: #2c3e50; border-radius: 10px; min-height: 4rem; }
+.input-area { font-size: 1.5rem; color: #f1c40f; margin-bottom: 20px; height: 1.5rem; }
+.mode-info { font-size: 1rem; color: #bdc3c7; margin-bottom: 10px; }
+#tap-indicator { width: 20px; height: 20px; border-radius: 50%; background: #7f8c8d; display: inline-block; }
+#tap-indicator.active { background: #e74c3c; }
+
+/* ミス時の揺れ演出 */
+.miss-shake {
+    animation: shake 0.5s;
+    border: 2px solid #e74c3c;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}

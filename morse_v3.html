@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Master - モールス符号練習</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Morse Master</h1>
+
+    <div id="start-menu">
+        <p>学習モードを選択してください</p>
+        <button class="menu-btn" onclick="startGame('WRITE')">送信モード (文字 → 符号)</button>
+        <button class="menu-btn" onclick="startGame('READ')">受信モード (符号 → 文字)</button>
+    </div>
+
+    <div id="game-area" style="display: none;">
+        <div id="mode-text" class="mode-info"></div>
+        <div class="display-area" id="question-display"></div>
+        <div class="input-area" id="input-display"></div>
+        <div id="tap-indicator"></div>
+
+        <div class="stats">
+            <div>スコア: <span id="score">0</span></div>
+        </div>
+        <div class="instruction">
+            スペースキーを短く叩くと「・」、長く押すと「ー」<br>
+            受信モードではキーボードで直接文字を打ってください
+        </div>
+
+    <!-- 戻るボタンに関連した部分 -->
+    </div>
+        <div id="screen-practice" class="screen" style="display: none;">
+        <button class="back-btn" onclick="showScreen('screen-main')">戻る</button>
+    </div>
+
+    <div id="screen-play" class="screen" style="display: none;">
+        <button class="back-btn" onclick="showScreen('screen-main')">戻る</button>
+    </div>
+
+    <div id="screen-result" class="screen" style="display: none;">
+        <button class="menu-btn" onclick="showScreen('screen-play')">遊ぶモードに戻る</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
